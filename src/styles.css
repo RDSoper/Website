@@ -1,0 +1,82 @@
+body {
+/*The styling in the body gives the default settings for elements if no other styling has been given. In this case the
+default values are that there will be no padding or margin, the font will by Times, and if not possible will move
+through the other fonts in order, the width of the page will be 1024 pixels, the font size will be 14 pixels and the
+colour of the text will be that specified. */
+    margin: 0;
+    padding: 0;
+    font-family: Times Times New Roman Georgia Serif;
+    width: 1024px;
+    color: #333333;
+    font-size: 14px;
+
+}
+.header{
+/*Changes the background colour of the header element to grey and the size of the background to match the size of the screen area.*/
+    background: #333333;
+    background-size: auto;
+}
+.links{
+/*Sets the colour and font size of the links in the navigation element to the colour specified and increase the font
+size to 120% of normal, which in this case is 120% of 14 pixels big.*/
+    color: #fefefe;
+    font-size: 120%;
+}
+.current{
+/*This is a class purely to identify the current page in the navigation element. Usually, this is done with javascript
+to ensure the url page matches the element link, and if so performs the styling. In this case the current page is
+identified with a solid red line 3 pixels wide underneath it.*/
+    border-bottom: 3px solid;
+    color: #ff0000
+}
+.links:hover, .links:focus{
+/* .link:focus and .link:hover performs the action on the element when the cursor hovers over it, or when the keyboard
+selects it with the tab button. Should either of those happen, it will change the color of the text and give it
+a solid red line underneath the element. */
+    color: #ff0000;
+    border-bottom: 3px solid;
+}
+.img{
+/*This is to overwrite the inherent anchor formatting in the text link underneath each image. The text-decoration
+command removes the underlining for the link text, and the color command changes the colour from the blue of the anchor
+tag, to the black asked for in the style guide.  */
+    text-decoration: none;
+    color: #333333;
+}
+.img:hover, .img:focus{
+/* .img:focus and .img:hover performs the action on the element when the cursor hovers over it, or when the keyboard
+selects it with the tab button. Should either of those happen, it will underline the text. */
+    text-decoration: underline;
+}
+.container{
+/*The container class allows you to organise the images within in a grid. By floating it to the left it moves the
+element over to the left so that other elements can be placed to its right. In this case the news element. The display
+command displays the images in a grid to ensure the wireframe was followed, and the width of the individual columns
+is given by the grid-template-columns command. This makes each column 225 pixels wide which gives enough room for the
+news element to fit to its right. The grid-template-rows command makes it each row 400 pixels, and each image in the
+grid is given a gap of 30 pixels to create a closer image to the wireframe.*/
+    float: left;
+    display: grid;
+    grid-template-columns: 225px 225px 225px;
+    grid-template-rows: 400px 400px;
+    grid-gap: 30px;
+
+
+}
+.news{
+/*Without the position command the element will not move according to the right and width commands. By using position
+and making the value absolute it will stay in that position regardless of the position of other elements. The right
+command moves the element 250 pixels from the right of the screen and the width restricts the width of the element to,
+in this case, 250 pixels*/
+    position: absolute;
+    right: 250px;
+    width: 200px;
+}
+
+.news_entry{
+/* The position: command is changing the position of the element relative to the position of the element it's nested in.
+In this case the news element. By doing it this way, the top: command moves it 15 pixels down from the bottom of the
+news entry above it, rather than the top of the browser screen.*/
+    position: relative;
+    top: 15px;
+}

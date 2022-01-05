@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Walton Hall Museum of Odds &amp; Ends</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta name="Russell Soper" content="Ou username"/>
+</head>
+<body>
+<header class="header"><!--A header was placed here to contain the links used for navigation.
+                            This keeps those links at the top of the screen to aid in usability. It was given a class
+                            so that a background could be added to all links in the header at the appropriate size,
+                            as specified in the stylesheet.-->
+    <nav>
+        <!--The nav tag holds all the links for navigation. The advantage of this tag over using div is that it's read
+        as a way to navigate the websites by assistive technologies. Within this tag are anchor tags that are used to
+        link to other pages in the website, specified by the href attribute which specifies the path to the page to be
+        displayed when the link is clicked. What is displayed on the page is between the anchor tags and specified by
+        the wireframe.
+          The span tag allows the use of other class and id's within an element that already has one. In this case
+        this allowed me to tag this link as the one that would be highlighted as the current page allowing me to add
+        styling for that aspect of the design. Whilst also keeping the links class that allowed me to add the same
+        styling as the other links to this link as well. -->
+        <a href="index.html" class="links"><span class="current">Museum of Odds &amp; Ends</span></a>
+        <a href="placeholder.html" class="links">Visit Us</a>
+        <a href="placeholder.html" class="links">Shop</a>
+        <a href="placeholder.html" class="links">Our History</a>
+    </nav>
+</header>
+<h1>Museum of Odds &amp; Ends</h1><!--
+                                   As these are just titles, a heading tag was all that was necessary. As it was
+                                   the main title it was given a H1 tag whilst the subtitle below was only given an
+                                   H2 tag to create a smaller subheading for the page below the header.
+                                  -->
+<h2>Walton Hall, Milton Keynes</h2>
+<div class="container">
+    <!--
+     A generic container was used to house the images and their links on the page. By using this I was able to more
+     easily place all six images with their links on the page using css and keep them all appropriately positioned
+     relative to each other as instead of six separate elements, it is condensed into one.
+         For the images themselves, I used the figure tag as this combines content with a caption underneath.
+     This allowed me to place captions underneath the image and have both the image and caption treated as one
+     element.
+         As it was requested that both the image and the caption linked to the same url, they both started with
+     anchor tags, explained above, nested inside was the img tag, with the path to the image given in the src
+     attribute, and alt text given by the alt attribute, to improve accessibility as the alt text would be read by
+     screen readers for those with difficulty seeing. It also improves useability as it displays the alt text if the
+     image can't be loaded. The width and height attributes specifies the width and height of the image, ensuring
+     they are all uniform on the website.
+         The figcaption tag specifies that the contents are the caption for, in this case, the image. Again
+     they were nested in anchor tags, and given that the styling was specified to be different from that usually given
+     to links by the anchor tag, they were given a class so that these changes could be made.
+    -->
+    <figure>
+        <a href="https://www.europeana.eu/en/item/440/item_UBMLSJFMKZCDOGRRMBW2UY5RDAL3V4IP">
+            <img src="imgs/1.jpeg" alt="Budapest Chainbridge, 1907" width="250" height="250">
+        </a>
+        <figcaption>
+            <a href="https://www.europeana.eu/en/item/440/item_UBMLSJFMKZCDOGRRMBW2UY5RDAL3V4IP" class="img">
+                Budapest Chainbridge, 1907
+            </a>
+        </figcaption>
+    </figure>
+    <figure>
+        <a href="https://www.europeana.eu/en/item/2026101/Partage_Plus_ProvidedCHO_Culture_Grid_PP0343_MMU">
+            <img src="imgs/2.jpeg" alt="Caffe Nero entrance, Manchester. Sankey, J. Gibbons, 1896" width="250" height="250">
+        </a>
+        <figcaption>
+            <a href="https://www.europeana.eu/en/item/2026101/Partage_Plus_ProvidedCHO_Culture_Grid_PP0343_MMU" class="img">
+                Caffe Nero entrance, Sankey, J. Gibbons
+            </a>
+        </figcaption>
+    </figure>
+    <figure>
+        <a href="https://www.europeana.eu/en/item/369/_129030">
+            <img src="imgs/3.jpeg" alt="Three red-figure attic vases, 5th century AD" width="250" height="250">
+        </a>
+        <figcaption>
+            <a href="https://www.europeana.eu/en/item/369/_129030" class="img">Three red-figure attic vases, 5th century AD
+            </a>
+        </figcaption>
+    </figure>
+    <figure>
+        <a href="https://www.europeana.eu/en/item/325/MG061">
+            <img src="imgs/4.jpeg" alt="Bronze Enamel Ring Pin, Early Medieval" width="250" height="250">
+        </a>
+        <figcaption>
+            <a href="https://www.europeana.eu/en/item/325/MG061" class="img">Bronze Enamel Ring Pin, Early Medieval</a>
+        </figcaption>
+    </figure>
+    <figure>
+        <a href="https://www.europeana.eu/en/item/2063624/UK_280_014">
+            <img src="imgs/5.jpeg" alt="An Overshot Mill in Wales, James Ward" width="250" height="250">
+        </a>
+        <figcaption>
+            <a href="https://www.europeana.eu/en/item/2063624/UK_280_014" class="img">An Overshot Mill in Wales, James Ward
+            </a>
+        </figcaption>
+    </figure>
+    <figure>
+        <a href="https://www.europeana.eu/en/item/9200387/BibliographicResource_3000117277098">
+            <img src="imgs/6.jpeg" alt="Portrait from “Travels in China”, 1804" width="250" height="250">
+        </a>
+        <figcaption>
+            <a href="https://www.europeana.eu/en/item/9200387/BibliographicResource_3000117277098" class="img">
+                Portrait from “Travels in China”, 1804
+            </a>
+        </figcaption>
+    </figure>
+</div>
+<div class="news">
+    <!--
+         A div is placed here with a class to contain the whole news section of the webpage, making it easier to
+     position and style. Within the div is another div that contains the individual news title date and entry. This is
+     so that I can individually create a 15 pixel gap between news items as specified in the style sheet. Headings
+     are used to style the titles, the main title of news uses heading 1 as it is the most important title, with news
+     title and date using heading 2 and 3 respectively. A paragraph tag is used for the news entry, and with no other
+     styling required it is left as is.
+    -->
+    <h1>News</h1>
+    <div class="news_entry1">
+        <h2>News Entry Title</h2>
+        <h3>News Entry Date</h3>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <div class="news_entry">
+        <h2 >News Entry Title</h2>
+        <h3>News Entry Date</h3>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+</div>
+</body>
+</html>
